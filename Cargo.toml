@@ -1,0 +1,22 @@
+[package]
+name = "willy_loman_3000"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+rand = { version = "0.9.0", features=['thread_rng']}
+
+[dev-dependencies]
+iai = "0.1"
+criterion = { version = "0.4", features = ["html_reports"] }
+concorde_rs = "0.1.1"
+
+[[bench]]
+name = "my_benchmarks"
+path = "benches/bench.rs"
+harness = false
+
+[[bench]]
+name = "criterion_benchmarks"
+path = "benches/criterion_benches.rs"
+harness = false
